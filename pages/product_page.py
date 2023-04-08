@@ -5,7 +5,7 @@ from page_obj_tests.pages.locators import ProductPageLocators
 
 
 class ProductPage(BasePage):
-    def check_correct_product_in_basket(self):
+    def should_be_success_message_on_product_page_after_adding_product_to_basket(self):
         self.check_product_name()
         self.check_product_price()
         self.check_successful_message()
