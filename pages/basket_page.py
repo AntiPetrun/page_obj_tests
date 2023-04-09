@@ -1,4 +1,4 @@
-from .locators import BasePageLocators, BasketPageLocators
+from .locators import BasketPageLocators
 from .base_page import BasePage
 
 
