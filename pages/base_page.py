@@ -8,7 +8,7 @@ from page_obj_tests.pages.locators import BasePageLocators
 
 
 class BasePage:
-    def __init__(self, browser, url, timeout=None):
+    def __init__(self, browser, url):
         self.browser = browser
         self.url = url
 
@@ -52,7 +52,7 @@ class BasePage:
             return False
         return True
 
-    def check_element_by_locator(self, how, what, timeout=4):
+    def check_element_by_locator(self, how, what):
         return self.browser.find_element(how, what).text
 
     def solve_quiz_and_get_code(self):

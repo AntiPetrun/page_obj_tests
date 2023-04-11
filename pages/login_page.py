@@ -3,8 +3,8 @@ from .locators import LoginPageLocators
 
 
 class LoginPage(BasePage):
-    def __init__(self, browser, url, email, password, timeout=None):
-        super().__init__(browser, url, timeout)
+    def __init__(self, browser, url, email, password):
+        super().__init__(browser, url)
         self.email = email
         self.password = password
 

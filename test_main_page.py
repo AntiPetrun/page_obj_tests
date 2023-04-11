@@ -1,3 +1,4 @@
+import time
 import pytest
 
 from .pages.basket_page import BasketPage
@@ -5,6 +6,8 @@ from .pages.login_page import LoginPage
 from .pages.main_page import MainPage
 
 link = "http://selenium1py.pythonanywhere.com/"
+email = str(time.time()) + "@fakemail.org"
+password = str(time.time())
 
 
 @pytest.mark.login_guest
@@ -18,7 +21,7 @@ class TestLoginFromMainPage:
         page = MainPage(browser, link)
         page.open()
         page.go_to_login_page()
-        login_page = LoginPage(browser, browser.current_url, email='email', password='password')
+        login_page = LoginPage(browser, browser.current_url, email, password)
         login_page.should_be_login_page()
 
 
